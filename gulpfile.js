@@ -28,6 +28,7 @@ import { browserServer } from './gulp/tasks/browserServer.js'
 import { stylesProcess } from './gulp/tasks/stylesProcess.js'
 import { jsBuild } from "./gulp/tasks/jsBuild.js";
 import { imagesProcess } from "./gulp/tasks/imagesProcess.js";
+import { otfToTtf, ttfToWoff } from "./gulp/tasks/fontsProcess.js";
 
 // Watchers
 function watcher() {
@@ -38,11 +39,12 @@ function watcher() {
     gulp.watch([path.watch.js.assets, path.watch.js.components, path.watch.js.modules], jsBuild);
 }
 
-const mainTasks = gulp.parallel(copyFiles, templatesBuild, stylesProcess, jsBuild, imagesProcess);
+const fonts = gulp.series(otfToTtf, ttfToWoff);
+
+const mainTasks = gulp.series(fonts, gulp.parallel(copyFiles, templatesBuild, stylesProcess, jsBuild, imagesProcess));
 
 // Development mode tasks
 const dev = gulp.series(cleanDist, mainTasks, gulp.parallel(watcher, browserServer));
 gulp.task('default', dev);
 
-gulp.task('images', imagesProcess);
 

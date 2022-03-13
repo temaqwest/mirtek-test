@@ -31,7 +31,7 @@ export const stylesProcess = () => {
             overrideBrowserslist: ["last 3 versions"],
             cascade: true,
         }))
-        // Uncomment if you need not minified duplicate
+        // Uncomment if you are looking for not minified duplicate
         //.pipe(app.gulp.dest(app.path.build.css))
         .pipe(cleanCSS({
             level: {
