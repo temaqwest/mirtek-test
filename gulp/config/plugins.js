@@ -23,9 +23,14 @@ import browserSync from "browser-sync";
  * Description: It checks if picture was updated
  */
 import newer from "gulp-newer";
+/**
+ * Description: gulp-rename provides simple file renaming methods.
+ */
+import rename from "gulp-rename";
 
 export const plugins = {
     replace,
+    rename,
     plumber,
     notify,
     browserSync,

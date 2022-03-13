@@ -31,10 +31,12 @@ export const path = {
         js: {
             assetsScripts: srcDir + 'assets/scripts/*.js',
             assetsLibs :srcDir + 'assets/libs/*.js',
-            components: srcDir + 'components/**/*.js'
+            components: srcDir + 'components/**/*.js',
+            modules: srcDir + 'assets/scripts/modules/*.js'
         },
         fonts: srcDir + 'assets/fonts/*.*',
-        img: srcDir + 'components/**/assets/*.*',
+        img: srcDir + 'components/**/assets/*.{jpg,jpeg,png,gif}',
+        svg: srcDir + 'components/**/assets/*.svg',
         files: srcDir + 'assets/files/**/*.*'
     },
     watch: {
@@ -48,10 +50,11 @@ export const path = {
         },
         js: {
             assets: srcDir + 'assets/scripts/*.js',
-            components: srcDir + 'components/**/*.js'
+            components: srcDir + 'components/**/*.js',
+            modules: srcDir + 'assets/scripts/modules/*.js'
         },
         fonts: srcDir + 'assets/fonts/*.*',
-        img: srcDir + 'components/**/assets/*.*',
+        img: srcDir + 'components/**/assets/*.{jpg,jpeg,png,gif,svg,ico}',
         files: srcDir + 'assets/files/**/*.*'
     },
     buildDir,
