@@ -1,6 +1,6 @@
 extend ../layouts/base
 
-include ../../components/button/button
+include ../../components/input/input
 
 block title
     | Example title
@@ -11,5 +11,10 @@ block main_title
 block content
     .container
         h1.testing Testing
+        +input({
+            type: 'input',
+            placeholder: 'Введите адрес электронной почты',
+            input_name: 'emailaddress'
+        }, '')
 
 

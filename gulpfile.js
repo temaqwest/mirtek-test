@@ -21,22 +21,24 @@ global.app = {
 }
 
 // Import tasks
-import { copy } from './gulp/tasks/copy.js';
-import { clean } from './gulp/tasks/clean.js';
-import { templates } from './gulp/tasks/templates.js';
+import { copyFiles } from './gulp/tasks/copyFiles.js';
+import { cleanDist } from './gulp/tasks/cleanDist.js';
+import { templatesBuild } from './gulp/tasks/templatesBuild.js';
 import { browserServer } from './gulp/tasks/browserServer.js'
+import { stylesProcess } from './gulp/tasks/stylesProcess.js'
 
 
 // Watchers
 function watcher() {
-    gulp.watch(path.watch.files, copy);
-    gulp.watch([path.watch.html.components, path.watch.html.templates], templates);
+    gulp.watch(path.watch.files, copyFiles);
+    gulp.watch([path.watch.html.components, path.watch.html.templates], templatesBuild);
+    gulp.watch([path.watch.style.components, path.watch.style.assets], stylesProcess);
 }
 
-const mainTasks = gulp.parallel(copy, templates);
+const mainTasks = gulp.parallel(copyFiles, templatesBuild, stylesProcess);
 
 // Development mode tasks
-const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, browserServer));
+const dev = gulp.series(cleanDist, mainTasks, gulp.parallel(watcher, browserServer));
 
 
 gulp.task('default', dev);

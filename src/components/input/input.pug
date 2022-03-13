@@ -1,0 +1,5 @@
+
+mixin input(data, modifier)
+
+    if data.type === 'input'
+        input(type= data.pass ? 'password':'text', name=data.input_name, placeholder=data.placeholder).input.input--data-field
