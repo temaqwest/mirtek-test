@@ -29,6 +29,7 @@ import { stylesProcess } from './gulp/tasks/stylesProcess.js'
 import { jsBuild } from "./gulp/tasks/jsBuild.js";
 import { imagesProcess } from "./gulp/tasks/imagesProcess.js";
 import { otfToTtf, ttfToWoff } from "./gulp/tasks/fontsProcess.js";
+import { zipIt } from "./gulp/tasks/zipIt.js";
 
 // Watchers
 function watcher() {
@@ -39,12 +40,21 @@ function watcher() {
     gulp.watch([path.watch.js.assets, path.watch.js.components, path.watch.js.modules], jsBuild);
 }
 
-const fonts = gulp.series(otfToTtf, ttfToWoff);
+const fontsTasks = gulp.series(otfToTtf, ttfToWoff);
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copyFiles, templatesBuild, stylesProcess, jsBuild, imagesProcess));
+const mainTasks = gulp.series(fontsTasks, gulp.parallel(copyFiles, templatesBuild, stylesProcess, jsBuild, imagesProcess));
 
 // Development mode tasks
 const dev = gulp.series(cleanDist, mainTasks, gulp.parallel(watcher, browserServer));
-gulp.task('default', dev);
+gulp.task('dev', dev);
+
+// Release mode tasks
+const build = gulp.series(cleanDist, mainTasks);
+gulp.task('release', build);
+
+// Create zip archive
+const createZip = gulp.series(cleanDist, mainTasks, zipIt);
+gulp.task('zip', createZip);
+
 
 

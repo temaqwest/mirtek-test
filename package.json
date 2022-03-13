@@ -4,7 +4,9 @@
   "description": "Mirtek test task",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "zip": "gulp zip"
   },
   "type": "module",
   "repository": {
@@ -42,6 +44,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-version-number": "^0.2.4",
+    "gulp-zip": "^5.1.0",
     "sass": "^1.49.9",
     "webpack": "^5.70.0",
     "webpack-stream": "^7.0.0"
