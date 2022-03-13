@@ -6,6 +6,6 @@
 
 import del from 'del';
 
-export const clean = () => {
+export const cleanDist = () => {
   return del(app.path.clean);
 };

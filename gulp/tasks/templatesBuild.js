@@ -7,7 +7,7 @@
 import versionNumber from 'gulp-version-number';
 import pug from 'gulp-pug';
 
-export const templates = () => {
+export const templatesBuild = () => {
   return app.gulp.src([app.path.src.html.pages])
       .pipe(app.plugins.plumber(
           app.plugins.notify.onError({
