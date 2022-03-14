@@ -1,0 +1,21 @@
+.icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+
+  &--small {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--medium {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--menu {
+    max-width: 16px;
+  }
+}
+
+

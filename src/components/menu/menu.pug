@@ -1,0 +1,16 @@
+include ../icon/icon
+
+mixin menu(data, modifier)
+    .side-menu
+        .side-menu__wrap
+            .side-menu__head
+                span.side-menu__head-title(title=data.title)!= data.title
+            nav.side-menu__nav
+                ul.side-menu__list
+                    for item in data.list
+                        li.side-menu__item(class= item.active ? 'side-menu__item--active' : '')
+                            +icon({
+                                id: item.icon,
+                                modifier: item.icon_modifier
+                            })
+                            a.side-menu__link(href= item.url)!= item.title
