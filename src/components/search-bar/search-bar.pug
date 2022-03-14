@@ -1,0 +1,18 @@
+include ../input/input
+include ../button/button
+
+mixin search-bar(data, modifier)
+    form.search-bar(class= modifier, action= data.action, method= data.method)
+        +button({
+            type: 'submit',
+            alt: 'Search button',
+            icon: 'search',
+            icon_modifier: 'icon--search-bar'
+        }, 'search-bar__button')
+        .search-bar__pad
+            +input({
+                type: 'text',
+                name: 'search',
+                placeholder: 'Search',
+                id: 'global-search',
+            }, 'search-bar__input')

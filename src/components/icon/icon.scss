@@ -14,7 +14,24 @@
   }
 
   &--menu {
-    max-width: 16px;
+    width: 16px;
+    max-height: 16px;
+  }
+
+  &--notifications {
+    width: 16px;
+    max-height: 16px;
+    color: #4F5F6F;
+  }
+
+  &--search-bar {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--select-arrow {
+    width: 10px;
+    height: 6px;
   }
 }
 

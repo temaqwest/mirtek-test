@@ -1,6 +1,8 @@
 extend ../layouts/base
 
 include ../../components/menu/menu
+include ../../components/top-bar/top-bar
+include ../../components/block-header/block-header
 
 block title
     | MIRTEK Dashboard
@@ -58,7 +60,40 @@ block menu
     }, '')
 
 block content
+    +top-bar()
 
+    .block.block--top
+        +block-header({
+            title: 'Hi Filip,',
+            subtitle: 'Checkout your latest projects and their progress.',
+        }, '')
 
+    .block.block--middle
+        +block-header({
+            title: 'Crunch some Numbers',
+            subtitle: 'See how your projects are progressing via the new statistics engine.',
+            options: {
+                title: 'Timeline:',
+                name: '7 days',
+                modifier: 'block-header__option-select'
+            }
+        }, '')
+
+    .block.block--bottom
+        +block-header({
+            title: 'Current Progress',
+            subtitle: 'This table will show you how your current projects are behaving.',
+        }, '')
+
+    .block.block--top
+        +block-header({
+            title: 'Crunch some Numbers',
+            subtitle: 'See how your projects are progressing via the new statistics engine.',
+            options: {
+                title: 'Timeline:',
+                name: '7 days',
+                modifier: 'block-header__option-select'
+            }
+        }, '')
 
 

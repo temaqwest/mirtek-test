@@ -1,0 +1,76 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.profile-bar {
+  display: inline-flex;
+  align-items: center;
+
+  &__notifications {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 29px;
+
+    &-counter {
+      font-family: "Open Sans", sans-serif;
+      color: #FFFFFF;
+      font-weight: bold;
+      font-size: 10px;
+      background-color: #1E88E5;
+      border-radius: 20px;
+      display: inline-block;
+      position: absolute;
+      top: -60%;
+      left: 40%;
+      min-width: 18px;
+      line-height: 18px;
+      padding: 0 5px;
+      text-align: center;
+      box-sizing: border-box;
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+
+    &-button {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__divider {
+    height: 24px;
+    width: 2px;
+    background-color: $color-divider;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: 14px;
+    border-radius: 50%;
+    background-color: $color-menu;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+
+    &-text {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      user-select: none;
+    }
+  }
+}

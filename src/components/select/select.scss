@@ -1,0 +1,19 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.select {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 11px;
+  margin-left: 11px;
+  cursor: pointer;
+
+  & .icon__title {
+    font-family: "Avenir Next LT Pro", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}

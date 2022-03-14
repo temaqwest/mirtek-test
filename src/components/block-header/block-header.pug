@@ -1,0 +1,15 @@
+mixin block-header(data, modifier)
+    .block-header
+        .block-header__content
+            .block-header__text
+                h1.block-header__title!= data.title
+                h2.block-header__subtitle!= data.subtitle
+
+            if data.options
+                .block-header__options
+                    .block-header__options-title!= data.options.title
+                    .block-header__option
+                        +select({
+                            title: data.options.name
+                        }, data.options.modifier)
+        .block-header__divider

@@ -1,0 +1,15 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.top-bar {
+  height: $header-height;
+  background-color: $color-tbar;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 33px;
+}

@@ -1,0 +1,19 @@
+include ../icon/icon
+
+mixin button(data, modifier)
+    button.button(class=modifier, type= data.type, title=data.title || data.alt)
+        if data.icon
+            +icon({
+                id: data.icon,
+                modifier: data.icon_modifier
+            })
+
+        if data.title
+            span.button__text!= data.title
+
+        if data.notification
+            .profile-bar__notifications-counter 8
+            +icon({
+                id: 'bell',
+                modifier: 'icon--notifications'
+            })

@@ -1,0 +1,8 @@
+mixin select(data, modifier)
+    .select(class= modifier)
+        +icon({
+            id: 'arrow_down',
+            modifier: 'icon--select-arrow select__icon',
+            title: data.title,
+            title_modifier: 'select__title'
+        })

@@ -1,0 +1,16 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.input {
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus, {
+    border: none;
+    -webkit-text-fill-color: $color-text;
+    -webkit-box-shadow: 0 0 0px 1000px $color-tbar inset;
+  }
+}

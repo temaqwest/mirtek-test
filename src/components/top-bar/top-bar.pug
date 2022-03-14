@@ -1,0 +1,12 @@
+include ../search-bar/search-bar
+include ../profile-bar/profile-bar
+
+mixin top-bar(data, modifier)
+    .top-bar
+        +search-bar({
+            action: '/dashboard/search',
+            method: 'get',
+        }, 'top-bar__form')
+        +profile-bar({
+
+        }, '')

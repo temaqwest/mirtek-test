@@ -1,0 +1,18 @@
+include ../button/button
+include ../icon/icon
+include ../select/select
+
+mixin profile-bar(data, modifier)
+    .profile-bar(class= modifier)
+        .profile-bar__notifications
+            +button({
+                type: 'button',
+                alt: 'Notifications',
+                notification: true,
+            }, 'profile-bar__notifications-button')
+        .profile-bar__divider
+        +select({
+            title: 'Filip J'
+        }, 'profile-bar__select')
+        .profile-bar__avatar
+            span.profile-bar__avatar-text F

@@ -1,0 +1,32 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.search-bar {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 18px;
+  color: #a1b1c2;
+  flex: 0 0 30%;
+
+  &__button {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__pad {
+    width: 100%;
+  }
+
+  &__input {
+    padding: 10px 0;
+    color: $color-text;
+    width: inherit;
+
+    &::placeholder {
+      color: #a1b1c2;
+    }
+  }
+}

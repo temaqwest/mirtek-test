@@ -53,3 +53,17 @@ button {
   z-index: 1;
   margin-left: 230px;
 }
+
+.block {
+  &--top {
+    margin-top: 52px;
+  }
+
+  &--bottom {
+    margin-top: 50px;
+  }
+
+  &--middle {
+    margin-top: 64px;
+  }
+}
