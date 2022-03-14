@@ -1,0 +1,8 @@
+mixin profile-card(data, modifier)
+    .profile-card(class= modifier)
+        if data.title || data.subtitle
+            .title!= data.title
+            .subtitle!= data.subtitle
+
+        if block
+            block

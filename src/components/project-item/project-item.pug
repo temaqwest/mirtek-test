@@ -1,0 +1,26 @@
+mixin project-item(data, modifier)
+    .project-item(class= modifier)
+        .project-item__avatar
+        .project-item__text
+            .project-item__title!= data.title
+            .project-item__subtitle!= data.subtitle
+        span.project-item__updated!= data.updated
+        .project-item__divider.divider.divider--y
+        .project-item__time
+            +icon({
+                id: 'time',
+                modifier: 'icon--time',
+                title: '26:30',
+                title_modifier: 'project-item__info',
+                reversed: true
+            })
+        .project-item__comments
+            +icon({
+                id: 'comments',
+                modifier: 'icon--comments',
+                title: '624',
+                title_modifier: 'project-item__info',
+                reversed: true
+            })
+        .project-item__progress
+            .project-item__progress-bar(aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', role='progressbar', style= data.progress_style)

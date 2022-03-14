@@ -55,6 +55,11 @@ button {
 }
 
 .block {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
   &--top {
     margin-top: 52px;
   }
@@ -66,4 +71,39 @@ button {
   &--middle {
     margin-top: 64px;
   }
+}
+
+.divider {
+  opacity: .4;
+  background-color: $color-divider;
+
+  &--y {
+    height: 24px;
+    width: 2px;
+  }
+
+  &--x {
+    height: 2px;
+    width: 100%;
+  }
+}
+
+.container {
+  margin: 0 20px;
+}
+
+
+.title {
+  font-size: 21px;
+  line-height: 170%;
+  text-align: left;
+  color: $color-text;
+}
+
+.subtitle {
+  font-size: 12.5px;
+  line-height: 170%;
+  letter-spacing: .13px;
+  text-align: left;
+  color: $color-text-secondary;
 }

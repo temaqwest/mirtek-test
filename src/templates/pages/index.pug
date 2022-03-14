@@ -3,6 +3,8 @@ extend ../layouts/base
 include ../../components/menu/menu
 include ../../components/top-bar/top-bar
 include ../../components/block-header/block-header
+include ../../components/project-item/project-item
+include ../../components/profile-card/profile-card
 
 block title
     | MIRTEK Dashboard
@@ -62,38 +64,86 @@ block menu
 block content
     +top-bar()
 
-    .block.block--top
-        +block-header({
-            title: 'Hi Filip,',
-            subtitle: 'Checkout your latest projects and their progress.',
-        }, '')
+    .container
+        article.block.block--top
+            +block-header({
+                title: 'Hi Filip,',
+                subtitle: 'Checkout your latest projects and their progress.',
+            }, '')
 
-    .block.block--middle
-        +block-header({
-            title: 'Crunch some Numbers',
-            subtitle: 'See how your projects are progressing via the new statistics engine.',
-            options: {
-                title: 'Timeline:',
-                name: '7 days',
-                modifier: 'block-header__option-select'
-            }
-        }, '')
+        article.block.block--middle
+            +block-header({
+                title: 'Crunch some Numbers',
+                subtitle: 'See how your projects are progressing via the new statistics engine.',
+                options: {
+                    title: 'Timeline:',
+                    name: '7 days',
+                    modifier: 'block-header__option-select'
+                }
+            }, '')
 
-    .block.block--bottom
-        +block-header({
-            title: 'Current Progress',
-            subtitle: 'This table will show you how your current projects are behaving.',
-        }, '')
+        article.block.block--bottom
+            +block-header({
+                title: 'Current Progress',
+                subtitle: 'This table will show you how your current projects are behaving.',
+            }, '')
+            .block__content.projects
+                +project-item({
+                    title: 'Project Title',
+                    subtitle: 'Design & Development',
+                    updated: 'Last updated Today at 4:24 AM',
+                    progress_style: 'width: 20%; background-color: #df468e;'
+                }, '')
+                +project-item({
+                    title: 'Project Title',
+                    subtitle: 'Design & Development',
+                    updated: 'Last updated Today at 4:24 AM',
+                    progress_style: 'width: 90%; background-image: linear-gradient(to top, #00bfa5, #a7ffeb);'
+                }, '')
+                +project-item({
+                    title: 'Project Title',
+                    subtitle: 'Design & Development',
+                    updated: 'Last updated Today at 4:24 AM',
+                    progress_style: 'width: 83%; background-image: linear-gradient(to top, #2979ff, #82b1ff);'
+                }, '')
+                +project-item({
+                    title: 'Project Title',
+                    subtitle: 'Design & Development',
+                    updated: 'Last updated Today at 4:24 AM',
+                    progress_style: 'width: 53%; background-color: #a0f;'
+                }, '')
 
-    .block.block--top
-        +block-header({
-            title: 'Crunch some Numbers',
-            subtitle: 'See how your projects are progressing via the new statistics engine.',
-            options: {
-                title: 'Timeline:',
-                name: '7 days',
-                modifier: 'block-header__option-select'
-            }
-        }, '')
+        article.block.block--top.h-mb--150
+            +block-header({
+                title: 'Crunch some Numbers',
+                subtitle: 'See how your projects are progressing via the new statistics engine.',
+                options: {
+                    title: 'Timeline:',
+                    name: '7 days',
+                    modifier: 'block-header__option-select'
+                }
+            }, '')
+            .block__content.profile-cards
+                +profile-card({})
+                    .profile-card__top
+                        .profile-card__avatar(style=`background-image:url(assets/img/person.jpg)`)
+                            .profile-card__indicator
+                        .profile-card__name Jake Appleseed
+                        .profile-card__location London, UK
+                    .profile-card__grid
+                        .profile-card__cell
+                            .profile-card__title Working hours
+                            .profile-card__value 14 hours
+                        .profile-card__cell
+                            .profile-card__title Amount total
+                            .profile-card__value $ 6,269
+                        .profile-card__cell
+                            .profile-card__title Overdue
+                            .profile-card__value $ 829
+                        .profile-card__cell
+                            .profile-card__title % overall work
+                            .profile-card__value 48%
+                        .profile-card__cell.profile-card__cell-action
+                            a(href="/", title='send invoice').profile-card__link Send Invoice
 
 
