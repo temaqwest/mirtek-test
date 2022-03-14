@@ -1,6 +1,10 @@
-//@import "common/variables.scss";
-//@import "common/*.scss";
+@import "common/destyle.scss";
+@import "common/variables.scss";
+@import "common/base.scss";
+@import "common/fonts.scss";
+@import "utils/helpers.scss";
 //@import "utils/*.scss";
 //@import "vendor/*.scss";
 
-@import '../../components/input/input.scss';
+@import '../../components/menu/menu.scss';
+@import '../../components/icon/icon.scss';

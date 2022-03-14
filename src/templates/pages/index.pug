@@ -1,20 +1,64 @@
 extend ../layouts/base
 
-include ../../components/input/input
+include ../../components/menu/menu
 
 block title
-    | Example title
+    | MIRTEK Dashboard
 
 block main_title
-    h1.h-hidden Testing
+    h1.h-hidden Dashboard
+
+block menu
+    +menu({
+        title: '@just<strong>Free</strong>',
+        list: [
+            {
+                active: true,
+                url: '/',
+                title: 'Home',
+                icon: 'home',
+                icon_modifier: 'icon--menu'
+            },
+            {
+                active: false,
+                url: '/',
+                title: 'Time Management',
+                icon: 'timeman',
+                icon_modifier: 'icon--menu'
+            },
+            {
+                active: false,
+                url: '/',
+                title: 'Inbox',
+                icon: 'inbox',
+                icon_modifier: 'icon--menu'
+            },
+            {
+                active: false,
+                url: '/',
+                title: 'Calendar',
+                icon: 'calendar',
+                icon_modifier: 'icon--menu'
+            },
+            {
+                active: false,
+                url: '/',
+                title: 'Analytics',
+                icon: 'analytics',
+                icon_modifier: 'icon--menu'
+            },
+            {
+                active: false,
+                url: '/',
+                title: 'Settings',
+                icon: 'settings',
+                icon_modifier: 'icon--menu'
+            },
+        ],
+    }, '')
 
 block content
-    .container
-        h1.testing Testing
-        +input({
-            type: 'input',
-            placeholder: 'Введите адрес электронной почты',
-            input_name: 'emailaddress'
-        }, '')
+
+
 
 

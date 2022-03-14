@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+          url("/assets/fonts/AvenirNextLTProBold.ttf") format('ttf'),
+          url("/assets/fonts/AvenirNextLTProBold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+          url("/assets/fonts/AvenirNextLTProRegular.ttf") format('ttf'),
+          url("/assets/fonts/AvenirNextLTProRegular.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+          url("/assets/fonts/OpenSans-Bold.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+          url("/assets/fonts/OpenSans-Regular.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src:
+          url("/assets/fonts/Kanit-Light.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Kanit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+          url("/assets/fonts/Kanit-Regular.ttf") format('ttf');
+}

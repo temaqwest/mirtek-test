@@ -28,7 +28,7 @@ import { browserServer } from './gulp/tasks/browserServer.js'
 import { stylesProcess } from './gulp/tasks/stylesProcess.js'
 import { jsBuild } from "./gulp/tasks/jsBuild.js";
 import { imagesProcess } from "./gulp/tasks/imagesProcess.js";
-import { otfToTtf, ttfToWoff } from "./gulp/tasks/fontsProcess.js";
+import { getFonts, otfToTtf, ttfToWoff } from "./gulp/tasks/fontsProcess.js";
 import { zipIt } from "./gulp/tasks/zipIt.js";
 
 // Watchers
@@ -40,7 +40,7 @@ function watcher() {
     gulp.watch([path.watch.js.assets, path.watch.js.components, path.watch.js.modules], jsBuild);
 }
 
-const fontsTasks = gulp.series(otfToTtf, ttfToWoff);
+const fontsTasks = gulp.series(otfToTtf, ttfToWoff, getFonts);
 
 const mainTasks = gulp.series(fontsTasks, gulp.parallel(copyFiles, templatesBuild, stylesProcess, jsBuild, imagesProcess));
 

@@ -1,0 +1,55 @@
+html,
+body {
+  min-width: 320px;
+  background-color: $color-main;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  font-weight: 400;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html.scroll-disable,
+html.scroll-disable body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  touch-action: none;
+  overflow: hidden;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+button {
+  outline: none;
+}
+
+.wrapper--main {
+  position: relative;
+  z-index: 1;
+  margin-left: 230px;
+}

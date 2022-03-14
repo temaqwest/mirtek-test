@@ -37,3 +37,8 @@ export const ttfToWoff = () => {
       .pipe(ttf2woff2())
       .pipe(app.gulp.dest(app.path.build.fonts))
 };
+
+export const getFonts = () => {
+    return app.gulp.src(app.path.src.fonts)
+        .pipe(app.gulp.dest(app.path.build.fonts))
+};
