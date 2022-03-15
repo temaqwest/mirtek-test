@@ -6,6 +6,7 @@ include ../../components/block-header/block-header
 include ../../components/project-item/project-item
 include ../../components/profile-card/profile-card
 include ../../components/chart/chart
+include ../../components/graph-column/graph-column
 
 block title
     | MIRTEK Dashboard
@@ -89,6 +90,29 @@ block content
                     modifier: 'block-header__option-select'
                 }
             }, '')
+            .block__content.graph-grid
+                .graph-column
+                    +graph-column({
+                        title: '96',
+                        subtitle: 'Working Hours',
+                    },'')
+                        .custom-chart(style='background-image: url(/assets/img/graph1.svg)')
+                    +graph-column({
+                        title: '1,204',
+                        subtitle: 'Conversations',
+                        id: 'apex_chart_5'
+                    },'')
+                    +graph-column({
+                        title: '7',
+                        subtitle: 'People',
+                    }, '')
+                        .custom-chart(style='background-image: url(/assets/img/graph2.svg)')
+                +chart({
+                    title: 'Daily progress',
+                    subtitle: 'Working Hours',
+                    options: true,
+                    id: 'apex_chart_4'
+                }, 'chart--half')
 
         article.block.block--bottom
             +block-header({

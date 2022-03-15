@@ -15,7 +15,10 @@ let options1 = {
     }],
     chart: {
         height: 350,
-        type: 'area'
+        type: 'area',
+        toolbar: {
+            show: false,
+        },
     },
     dataLabels: {
         enabled: false
@@ -26,6 +29,10 @@ let options1 = {
     fill: {
         colors:['#9c27b099', '#f5005799'],
         type: 'solid',
+    },
+    grid: {
+        borderColor: '#e7ebf0',
+        row: {},
     },
     colors: ['#9c27b080', '#f5005780'],
     legend: {

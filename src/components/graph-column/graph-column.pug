@@ -1,0 +1,15 @@
+include ../chart/chart
+
+mixin graph-column(data, modifier)
+    .graph-column__cell
+        .graph-column__info
+            .title!= data.title
+            .subtitle!= data.subtitle
+
+        if data.id
+            +chart({
+                id: data.id,
+            }, 'chart--clean h-mt--30')
+
+        if block
+            block

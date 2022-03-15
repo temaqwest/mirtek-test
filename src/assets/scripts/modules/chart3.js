@@ -13,9 +13,9 @@ let options3 = {
     chart: {
         height: 220,
         type: 'line',
-        zoom: {
-            enabled: false
-        }
+        toolbar: {
+            show: false,
+        },
     },
     dataLabels: {
         enabled: false

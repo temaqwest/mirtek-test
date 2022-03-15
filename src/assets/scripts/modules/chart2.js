@@ -27,7 +27,6 @@ let options2 = {
     },
     legend: {
         formatter: function(val, opts) {
-            console.log(val, opts)
             return val + "      " + opts.w.globals.series[opts.seriesIndex]
         },
         horizontalAlign: 'center',
