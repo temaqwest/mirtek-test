@@ -1,9 +1,15 @@
 include ../icon/icon
+include ../button/button
 
 mixin menu(data, modifier)
     .side-menu
         .side-menu__wrap
             .side-menu__head
+                +button({
+                    icon: 'exit',
+                    type: 'button',
+                    alt: 'Close menu'
+                }, 'side-menu__burger')
                 span.side-menu__head-title(title=data.title)!= data.title
             nav.side-menu__nav
                 ul.side-menu__list

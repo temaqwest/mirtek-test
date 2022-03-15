@@ -97,12 +97,20 @@
 @media (max-width: $mobile) {
   .project-item {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: center;
+    row-gap: 20px;
 
     &__divider {
       display: none;
+    }
+
+    &__progress,
+    &__updated,
+    &__text,
+    &__avatar {
+      grid-column: 1/3;
     }
   }
 }

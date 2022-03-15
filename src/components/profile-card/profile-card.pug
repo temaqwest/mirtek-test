@@ -1,8 +1,9 @@
 mixin profile-card(data, modifier)
-    .profile-card(class= modifier)
+    .profile-card(class= data.title ? 'profile-card--header ' + modifier : modifier)
         if data.title || data.subtitle
-            .title!= data.title
-            .subtitle!= data.subtitle
+            .profile-card__header
+                .title!= data.title
+                .subtitle!= data.subtitle
 
         if block
             block

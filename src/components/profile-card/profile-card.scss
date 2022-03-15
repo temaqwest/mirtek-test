@@ -6,17 +6,21 @@
 
 .profile-cards {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   margin-top: 42px;
   column-gap: 23px;
+  row-gap: 30px;
 }
 
 .profile-card {
   box-shadow: 1px 1.7px 6px 0 rgba(139, 157, 175, 0.1);
   background-color: #fff;
-  max-width: 375px;
-  width: 100%;
+  width: 370px;
   padding: 34px 0 0;
+
+  &--header {
+    padding: 28px 20px 41px;
+  }
 
   &__avatar {
     width: 120px;
@@ -55,6 +59,13 @@
     font-weight: normal;
     line-height: 1;
     text-align: left;
+
+    &--size-xl {
+      font-size: 31.5px;
+      line-height: 21px;
+      margin: 64px 0;
+      text-align: center;
+    }
   }
 
   &__grid {
@@ -104,5 +115,20 @@
     align-items: center;
     width: 100%;
     margin-bottom: 26px;
+  }
+
+  &--overdue {
+    .profile-card__link {
+      font-size: 12px;
+      font-weight: normal;
+      text-align: left;
+      color: #a1b1c2;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .profile-card {
+    width: 100%;
   }
 }

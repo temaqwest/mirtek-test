@@ -1,8 +1,14 @@
 include ../search-bar/search-bar
 include ../profile-bar/profile-bar
+include ../button/button
 
 mixin top-bar(data, modifier)
     .top-bar
+        +button({
+            icon: 'burger',
+            type: 'button',
+            alt: 'Open menu'
+        }, 'top-bar__burger')
         +search-bar({
             action: '/dashboard/search',
             method: 'get',

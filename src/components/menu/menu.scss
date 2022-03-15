@@ -7,6 +7,23 @@
   max-width: 230px;
   background-color: $color-menu;
   height: 100%;
+  z-index: 2;
+
+  &__burger {
+    background-color: $color-menu--active;
+    border-radius: 50%;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    transition: opacity .2s ease-out;
+    display: none;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
 
   &__wrap {
     height: inherit;
@@ -74,14 +91,35 @@
       }
     }
 
-    @media (hover: none) and (pointer: coarse) {
-      &:hover {
-        background-color: #F1606310;
+  }
+}
 
-        .side-menu__link {
-          color: var(--color-red-juice);
-        }
-      }
+@media (max-width: $mobile) {
+  .side-menu {
+    width: 100%;
+    max-width: initial;
+    height: 100vh;
+    top: 0;
+    visibility: hidden;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: .45s ease-out;
+    pointer-events: none;
+
+    &__head {
+      justify-content: space-between;
+      padding: 15px;
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    &--active {
+      visibility: visible;
+      pointer-events: auto;
+      clip-path: circle(1000px at 90% -20%);
+      -webkit-clip-path: circle(1000px at 90% -20%);
     }
   }
 }

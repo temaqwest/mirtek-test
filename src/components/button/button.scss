@@ -3,3 +3,10 @@
  *
  * @author Tatevosyan Artem (@teqst)
  */
+
+.button {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+}

@@ -52,6 +52,13 @@ button {
   position: relative;
   z-index: 1;
   margin-left: 230px;
+
+
+  @media (max-width: $mobile) {
+    & {
+      margin-left: 0;
+    }
+  }
 }
 
 .block {
@@ -95,14 +102,13 @@ button {
 
 .title {
   font-size: 21px;
-  line-height: 170%;
+  line-height: 130%;
   text-align: left;
   color: $color-text;
 }
 
 .subtitle {
   font-size: 12.5px;
-  line-height: 170%;
   letter-spacing: .13px;
   text-align: left;
   color: $color-text-secondary;

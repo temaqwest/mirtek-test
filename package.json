@@ -50,6 +50,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "apexcharts": "^3.33.2",
     "gulp-cli": "^2.3.0"
   }
 }

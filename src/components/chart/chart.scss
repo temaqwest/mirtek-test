@@ -1,0 +1,26 @@
+/**
+ * 
+ *
+ * @author Tatevosyan Artem (@teqst)
+ */
+
+.chart {
+  padding: 30px 20px;
+  box-shadow: 1px 1.7px 6px 0 rgba(139, 157, 175, 0.1);
+  background-color: #fff;
+  margin-top: 41px;
+
+  &--clean {
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+    background-color: transparent;
+  }
+
+  &__header {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

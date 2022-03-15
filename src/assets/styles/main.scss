@@ -6,6 +6,7 @@
 //@import "utils/*.scss";
 //@import "vendor/*.scss";
 
+@import '../../components/button/button.scss';
 @import '../../components/menu/menu.scss';
 @import '../../components/icon/icon.scss';
 @import '../../components/top-bar/top-bar.scss';
@@ -13,7 +14,7 @@
 @import '../../components/profile-bar/profile-bar.scss';
 @import '../../components/input/input.scss';
 @import '../../components/select/select.scss';
-@import '../../components/button/button.scss';
 @import '../../components/block-header/block-header.scss';
 @import '../../components/project-item/project-item.scss';
 @import '../../components/profile-card/profile-card.scss';
+@import '../../components/chart/chart.scss';

@@ -5,6 +5,7 @@ include ../../components/top-bar/top-bar
 include ../../components/block-header/block-header
 include ../../components/project-item/project-item
 include ../../components/profile-card/profile-card
+include ../../components/chart/chart
 
 block title
     | MIRTEK Dashboard
@@ -70,6 +71,13 @@ block content
                 title: 'Hi Filip,',
                 subtitle: 'Checkout your latest projects and their progress.',
             }, '')
+            .block__content
+                +chart({
+                    title: 'Wavy Lines',
+                    subtitle: 'Working Hours',
+                    options: true,
+                    id: 'apex_chart_1'
+                }, '')
 
         article.block.block--middle
             +block-header({
@@ -124,7 +132,14 @@ block content
                 }
             }, '')
             .block__content.profile-cards
-                +profile-card({})
+                +profile-card({
+                    title: 'Client Hours',
+                    subtitle: 'Working Hours'
+                }, '')
+                    +chart({
+                        id: 'apex_chart_2',
+                    }, 'chart--clean h-mt--30')
+                +profile-card({}, '')
                     .profile-card__top
                         .profile-card__avatar(style=`background-image:url(assets/img/person.jpg)`)
                             .profile-card__indicator
@@ -145,5 +160,13 @@ block content
                             .profile-card__value 48%
                         .profile-card__cell.profile-card__cell-action
                             a(href="/", title='send invoice').profile-card__link Send Invoice
-
+                +profile-card({
+                    title: 'Total Overdue',
+                    subtitle: 'I need Dollars'
+                }, 'profile-card--overdue')
+                    .profile-card__value.profile-card__value--size-xl $14,220
+                    +chart({
+                        id: 'apex_chart_3',
+                    }, 'chart--clean h-mt--30')
+                    a(href="/").profile-card__link Export PDF
 

@@ -1,0 +1,14 @@
+mixin chart(data, modifier)
+    .chart(class= modifier)
+        if data.title && data.subtitle
+            .chart__header
+                .chart__info
+                    .title!= data.title
+                    .subtitle!= data.subtitle
+
+                if data.options
+                    .chart__options
+                        +select({
+                            title: 'THIS WEEK'
+                        }, 'chart__select')
+        .chart__apexchart(id= data.id)
