@@ -1,7 +1,7 @@
 mixin icon(data)
     if data.reversed
         svg.icon(class= data.modifier)
-            use(xlink:href="/assets/img/icon-sprite.svg#" + data.id)
+            use(xlink:href="assets/img/icon-sprite.svg#" + data.id)
 
         if data.title
             span(class=data.title_modifier).icon__title!= data.title
@@ -10,4 +10,4 @@ mixin icon(data)
             span(class=data.title_modifier).icon__title!= data.title
 
         svg.icon(class= data.modifier)
-            use(xlink:href="/assets/img/icon-sprite.svg#" + data.id)
+            use(xlink:href="assets/img/icon-sprite.svg#" + data.id)

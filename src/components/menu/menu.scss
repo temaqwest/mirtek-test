@@ -34,7 +34,7 @@
   &__head {
     background-color: $color-blue;
     color: #FFFFFF;
-    height: $header-height;
+    min-height: $header-height;
     display: flex;
     align-items: center;
     justify-content: center;
